@@ -13,7 +13,7 @@ Welcome to Clever documentation!
 
    getting_started
    reference/index
-   packages/index
+   reference/packages/index
    core
    api/index
    faq
