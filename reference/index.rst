@@ -2,7 +2,7 @@ Language reference
 ====================================
 
 .. toctree::
-  :maxdepth: 10
+  :maxdepth: 3
 
   intro
   types/index
