@@ -31,4 +31,26 @@ To use a C function in a Clever script, firstly, it's necessary write an interfa
 
 
 Where "path" is the path to shared library. The keyword **extern** is used to indicate that next function declarations are external functions contained on shared library "path". 
+
+After we have created, we can use normally the functions defined. To illustrate, let's build a shared library on Linux and call its functions using clever. Obviously, first, we need writte the C code:
+
+.. sourcecode:: c++
+
+	//File: hello.c
+	//Description: A very simple C library
+	#include <stdio.h>
+
+	void hello() {
+		printf("Hello Clever FFI Module!\n");
+	}
+
+	int add(int a, int b) {
+	}
+
+	void print(char* s) {
+		printf("S=%s\n",s);
+	}
+
+
+
 	
