@@ -12,7 +12,7 @@ In this section, it's presented how to access some simple C functions using FFI 
 
 To use a C function in a Clever script, firstly, it's necessary write an interface like this:
 
-.. sourcecode:: clever
+.. sourcecode:: c++
 
 	//File: hello.clvh                   
 	//Description: A simple FFI example  
@@ -20,13 +20,10 @@ To use a C function in a Clever script, firstly, it's necessary write an interfa
 	import std;
 	
 	extern "path" {
-		/*
-		Call function function_name_1 on library "path"
-		*/
+		//Call function function_name_1 on library "path".
 		return_type function_name_1(arg1, arg2, ... );
-		/*
-			Call "function_name_2_on_path" on library "path" using alias function_name_2	
-		*/
+
+		//Call "function_name_2_on_path" on library "path" using alias function_name_2.
 		return_type function_name_2(arg1, arg2, ... ) as "function_name_2_on_path";
 		...
 	}
