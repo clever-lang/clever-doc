@@ -6,8 +6,6 @@
 Clever documentation
 ================================================
 
-  .. image:: logo.jpg
-
 Welcome to Clever documentation!
 
 .. toctree::
