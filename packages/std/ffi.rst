@@ -111,7 +111,7 @@ its functions in Clever using:
 
 
 
-The alias is important because allow we access in Clever, functions with forbidden 
+The alias is an important thing because allow we access in Clever, functions with forbidden 
 names like "_sub" on last example.
 
 
