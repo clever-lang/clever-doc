@@ -1,9 +1,26 @@
 Reflection
 ================================================
 
------------------------
+----------
+Functions
+----------
+
+* String **get_type(Object obj)**:
+   Returns a String containing the type name of a variable.
+
+.. sourcecode:: cpp
+
+    println(get_type(1)); // Int
+    println(get_type(getcwd)); // Function<String>
+
+
+--------
+Classes
+--------
+
+########################
 ReflectionPackage class
------------------------
+########################
 
 **Methods**
 
@@ -23,9 +40,9 @@ ReflectionPackage class
      ReflectionPackage pkg("std");
      println(pkg.getModules()); // displays '[math, io, etc]'
 
-------------------------
+########################
 ReflectionFunction class
-------------------------
+########################
 
 **Methods**
 
