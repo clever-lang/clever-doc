@@ -18,9 +18,9 @@ Functions
 Classes
 --------
 
-########################
-ReflectionPackage class
-########################
+##################
+ReflectionPackage
+##################
 
 **Methods**
 
@@ -40,9 +40,9 @@ ReflectionPackage class
      ReflectionPackage pkg("std");
      println(pkg.getModules()); // displays '[math, io, etc]'
 
-########################
-ReflectionFunction class
-########################
+###################
+ReflectionFunction
+###################
 
 **Methods**
 
