@@ -114,12 +114,50 @@ its functions in Clever using:
 
 
 
-The alias is an important thing because allow we access in Clever, functions with forbidden
+The alias is an important thing because allow we access in Clever functions with forbidden
 names like "_sub" on last example.
 
 
 The FFIObject
 --------------
+
+Sometimes, we need to save data of an object definied in a shared library, as Clever can't
+manipulate it  directly, so it's necessary a passive data strucuture to act like a 
+intermediate. FFIObject is this intermediate (like a C++ reference, per example).
+
+
+The FFIObject is a special type, because its function is only save a pointer to data 
+structures created in a shared library. It's a **passive** structure.
+
+Using the type alias, we can build ADT (Abstract Data Type) like:
+
+
+::
+
+	import std;
+
+	use BigInt as std.ffi::FFIObject;
+
+
+And, using the alias previously definied, we can build a simple interface to libgmp:
+
+::
+
+	import std;
+
+	use BigInt as std.ffi::FFIObject;
+
+	extern "./gmp_cpp" {
+		BigInt init_bi();
+		BigInt add_bi(BigInt res, BigInt a, BigInt b);
+		Void set_str_bi(BigInt op, String str, Int base);
+		Void set_bi(BigInt op1, BigInt op2);
+		Void clear_bi(BigInt x);
+
+		String get_str_bi(BigInt op, Int base);
+	}
+
+
 
 
 
