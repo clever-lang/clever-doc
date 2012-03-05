@@ -13,7 +13,6 @@ Functions
     println(get_type(1)); // Int
     println(get_type(getcwd)); // Function<String>
 
-
 --------
 Classes
 --------
