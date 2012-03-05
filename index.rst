@@ -14,10 +14,11 @@ Welcome to Clever documentation!
    :maxdepth: 1
 
    getting_started
+   reference/index
    packages/index
-   faq
    core
    api/index
+   faq
 
 
 Indices and tables

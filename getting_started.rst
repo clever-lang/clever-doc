@@ -27,9 +27,9 @@ can do::
 
   "hello world!".toUpper()
 
-----------------
+################
 const qualifier
-----------------
+################
 
 You can mark a variable to not be changed along your code. Just use the
 const qualifier. ::
@@ -58,9 +58,11 @@ for statements
   for (Int i = 0; i < 10; ++i) {
   }
 
-#################
-Function syntax
-#################
+---------------------
+Function declaration
+---------------------
+
+The syntax for declaring a function:
 
 ::
 
@@ -68,11 +70,38 @@ Function syntax
     return bar;
   }
 
-#################
-Importing module
-#################
+###################
+Anonymous function
+###################
+
+::
+
+  Auto func = Void () {
+      println("hello world!");
+  }
+  func(); // Displays 'hello world!'
+
+-----------------
+Import statement
+-----------------
+
+Currently there are two way to use the import statement, and for both
+we can use an alias to refer to its content. See below:
+
+###################
+Importing a module
+###################
 
 ::
 
   import std.io;
   import std.regex as re;
+
+########################
+Importing a source file
+########################
+
+::
+
+  import 'foo.clv';
+  import 'bar.clv' as bar;
