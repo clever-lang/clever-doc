@@ -1,6 +1,8 @@
 Getting started!
 ================================================
 
+.. highlight:: cpp
+
 **Clever** is a general purpose statically typed, multi-paradigm
 (object-oriented, generic, imperative) programming language written in
 *C++*. It aims to have a small footprint and supply an useful set of
