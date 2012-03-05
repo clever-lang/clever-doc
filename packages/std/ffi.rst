@@ -16,7 +16,7 @@ using FFI module.
 To use a C function in a Clever script, firstly, it's necessary write an
 interface like this:
 
-::
+.. sourcecode:: cpp
 
 	//File: hello.clvh
 	//Description: A simple FFI example
@@ -29,7 +29,7 @@ interface like this:
 		*/
 		return_type function_name_1(arg1, arg2, ... );
 		/*
-			Call "function_name_2_on_path" on library "path" using alias function_name_2	
+			Call "function_name_2_on_path" on library "path" using alias function_name_2
 		*/
 		return_type function_name_2(arg1, arg2, ... ) as "function_name_2_on_path";
 		...
