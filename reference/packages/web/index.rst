@@ -1,4 +1,4 @@
-Standard package
+Web package
 ================================================
 
 .. toctree::
