@@ -9,7 +9,7 @@ and C and C++ functions contained on dynamically linked libraries (.dll on
 Windows, .so on Linux).
 
 Using FFI, one can easily extend Clever without the need for recompilation.
-You could even load libraries written in other languages, as long as it's 
+You could even load libraries written in other languages, as long as it's
 available as a shared object (so) or dynamically linked library (dll).
 
 A Simple Example
@@ -18,7 +18,7 @@ A Simple Example
 In this section, it's presented how to access some simple C functions
 using the FFI module.
 
-The first step is to describe the library's interface. You can do this using 
+The first step is to describe the library's interface. You can do this using
 an `extern` block like this:
 
 ::
@@ -122,12 +122,12 @@ names like "_sub" on last example.
 The FFIObject
 --------------
 
-Sometimes, we use a library that manipulates some kind of class/struct. 
-Unfortunatelly, Clever doesn't provide external class/struct mapping, but it 
+Sometimes, we use a library that manipulates some kind of class/struct.
+Unfortunatelly, Clever doesn't provide external class/struct mapping, but it
 does provide a workaround for these cases: the `FFIObject`.
 
-The `FFIObject` is a passive intermediate data structure that serves as a 
-representation of the library's data structures or just as placeholder to 
+The `FFIObject` is a passive intermediate data structure that serves as a
+representation of the library's data structures or just as placeholder to
 pointers and C++ references.
 
 Using the type alias, we can build ADT (Abstract Data Type) like:
