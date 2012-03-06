@@ -30,11 +30,13 @@ Native data types
   Bool is = true;
   Array<Int> arr;
   Map<Int, String> map;
+  Pair<Int, String> p;
+  Function<Void> f;
 
 Native data types in Clever are first-class object. This means that you
 can do::
 
-  "hello world!".toUpper()
+  "hello world!".toUpper(); // Returns 'HELLO WORLD!'
 
 ################
 const qualifier
@@ -86,7 +88,7 @@ Anonymous function
 ::
 
   Auto func = Void () {
-      println("hello world!");
+      std.io::println("hello world!");
   }
   func(); // Displays 'hello world!'
 
