@@ -4,20 +4,22 @@ FFI - Foreign Function Interface
 .. highlight:: cpp
 
 The FFI module is the Clever interface to external functions. This module
-allows to use C and C++ functions contained on Shared Libraries (.dlls,
-.so,...) in Clever scripts. Using FFI, it's possible easily to extend
-Clever using your favorite language, since many languages have C API.
+is a wrapper around the libffi library, which provides means to use C
+and C and C++ functions contained on dynamically linked libraries (.dll on
+Windows, .so on Linux).
 
-
+Using FFI, one can easily extend Clever without the need for recompilation.
+You could even load libraries written in other languages, as long as it's 
+available as a shared object (so) or dynamically linked library (dll).
 
 A Simple Example
 --------------------
 
 In this section, it's presented how to access some simple C functions
-using FFI module.
+using the FFI module.
 
-To use a C function in a Clever script, firstly, it's necessary write
-an interface like this:
+The first step is to describe the library's interface. You can do this using 
+an `extern` block like this:
 
 ::
 
@@ -43,14 +45,13 @@ an interface like this:
 	}
 
 
-
 Where "path" is the path to shared library. The keyword **extern** is used
 to indicate that next function declarations are external functions contained
 on shared library "path".
 
 After we've created the interface, we can use normally the functions defined.
 To illustrate, let's build a shared library on Linux and call its functions
-using clever. Obviously, first, we need write the C code:
+using Clever. Obviously, first, we need write the C code:
 
 ::
 
@@ -121,16 +122,15 @@ names like "_sub" on last example.
 The FFIObject
 --------------
 
-Sometimes, we need to save data of an object definied in a shared library, as Clever can't
-manipulate it  directly, so it's necessary a passive data strucuture to act like a 
-intermediate. FFIObject is this intermediate (like a C++ reference, per example).
+Sometimes, we use a library that manipulates some kind of class/struct. 
+Unfortunatelly, Clever doesn't provide external class/struct mapping, but it 
+does provide a workaround for these cases: the `FFIObject`.
 
-
-The FFIObject is a special type, because its function is only save a pointer to data 
-structures created in a shared library. It's a **passive** structure.
+The `FFIObject` is a passive intermediate data structure that serves as a 
+representation of the library's data structures or just as placeholder to 
+pointers and C++ references.
 
 Using the type alias, we can build ADT (Abstract Data Type) like:
-
 
 ::
 
@@ -156,9 +156,3 @@ And, using the alias previously definied, we can build a simple interface to lib
 
 		String get_str_bi(BigInt op, Int base);
 	}
-
-
-
-
-
-
