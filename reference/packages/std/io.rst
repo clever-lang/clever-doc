@@ -13,8 +13,8 @@ Functions
 
 ::
 
-   import std.io;
-   println("Hello!"); // Displays 'Hello!' with a \n terminator
+   import std.io as io;
+   io::println("Hello!"); // Displays 'Hello!' with a \n terminator
 
 * Void **print([...])**:
    Prints the value of arguments supplied after calling its respective toString()
@@ -22,5 +22,5 @@ Functions
 
 ::
 
-   import std.io;
-   println("Hello!"); // Displays 'Hello!' without a \n terminator
+   import std.io as io;
+   io::println("Hello!"); // Displays 'Hello!' without a \n terminator
