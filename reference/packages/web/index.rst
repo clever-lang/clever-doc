@@ -1,8 +1,7 @@
-Packages
+Standard package
 ================================================
 
 .. toctree::
-   :maxdepth: 1
 
-   std/index
-   web/index
+   request
+   session
