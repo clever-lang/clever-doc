@@ -1,11 +1,31 @@
-Core Development
-===========================================
+Getting involved!
+====================================
 
 The *Clever Team* is usually on-line at IRC #clever (irc.freenode.net)
 
+Never have tried IRC? Test it! http://webchat.freenode.net/
+
+Mailing list
 -----------------
+
+Our mailing list is http://groups.google.com/group/clever-lang
+
+We have a lot of talks on IRC, but It's nice to register some debats on
+the group!
+
+Documentation
+---------------
+
+Help us revising and writing docs!
+
+**Documentation repository:** https://github.com/clever-lang/clever-doc
+
+
+Core Development
+-------------------
+
 Coding standards
------------------
+###################
 
 We mostly code based on the *Google C++ Style Guide* [1], which seems sane
 enough.
@@ -24,6 +44,9 @@ could implement one of the ideas from our whishlist:
 `TODO List & Ideas <https://github.com/clever-lang/clever/wiki/TODO-List-&-Ideas>`_
 
 **Git help:** - `Fork a repo <http://help.github.com/fork-a-repo/>`_ - `Send pull requests <http://help.github.com/send-pull-requests/>`_
+
+
+**Source code repository:** https://github.com/clever-lang/clever
 
 [1] - `Google C++ Style Guide <http://google-styleguide.googlecode.com/svn/trunk/cppguide.xml>`_
 

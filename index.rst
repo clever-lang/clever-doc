@@ -14,10 +14,15 @@ Welcome to Clever documentation!
    getting_started
    reference/index
    reference/packages/index
-   core
+   getting_involved
    api/index
    faq
 
+Links
+==================
+
+* `Report a bug <https://github.com/clever-lang/clever/issues>`_
+* `Pull request <https://github.com/clever-lang/clever/pulls>`_
 
 Indices and tables
 ==================
