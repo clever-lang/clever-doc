@@ -105,8 +105,8 @@ Importing a module
 
 ::
 
-  import std.io;
-  import std.regex as re;
+  import std.io.*;
+  import std.regex.* as re;
 
 ########################
 Importing a source file

@@ -23,7 +23,7 @@ an `extern` block like this:
 
 ::
 
-	import std;
+	import std.*;
 
 	extern "path" {
 
@@ -96,7 +96,7 @@ its functions in Clever using:
 	//File: hello.clv
 	//Description: A simple FFI example
 
-	import std;
+	import std.*;
 
 	extern "./hello" {
 		Void hello();
@@ -134,7 +134,7 @@ Using the type alias, we can build ADT (Abstract Data Type) like:
 
 ::
 
-	import std;
+	import std.*;
 
 	use BigInt as std.ffi::FFIObject;
 
@@ -143,7 +143,7 @@ And, using the alias previously definied, we can build a simple interface to lib
 
 ::
 
-	import std;
+	import std.*;
 
 	use BigInt as std.ffi::FFIObject;
 
