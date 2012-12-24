@@ -3,16 +3,16 @@ Getting started!
 
 .. highlight:: cpp
 
-**Clever** is a general purpose statically typed, multi-paradigm
-(object-oriented, generic, imperative) programming language written in
-*C++*. It aims to have a small footprint and supply an useful set of
-features, many seen in other languages.
+**Clever** is a general purpose dynamically typed, multi-paradigm
+(object-oriented, imperative) programming language written in *C++*.
+It aims to have a small footprint and supply an useful set of features, 
+many seen in other languages.
 
 -----------
-Installing
+Building
 -----------
 
-To install Clever is easy, you will need to have *CMake* installed.
+To build Clever is easy, you will need to have *CMake* [1] installed.
 Enter in the clever source directory and run ``cmake .``
 
 In this stage, you can help the *Clever Team* also by running ``make
