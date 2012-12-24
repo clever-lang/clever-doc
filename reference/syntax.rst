@@ -4,11 +4,13 @@ Syntax
 .. highlight:: javascript
 
 This document specifies the language's syntax by showing some code examples.
+You can see the Clever parser grammar on :doc:`../internals/grammar`
 
 Comments
 --------
 
 - Single line
+
 Everything in a line after `//` is considered comment and it is discarded by the Clever interpreter.
 
 ::
@@ -17,6 +19,7 @@ Everything in a line after `//` is considered comment and it is discarded by the
 	y = x; // Performs a copy
 
 - Multi-line
+
 Multi-line comments are similar to the C one.
 
 ::
@@ -74,7 +77,7 @@ Functions
 
 	var foo = doFoo();
 	var sum = add(1, 3);
-	
+
 Scope rules
 -----------
 
@@ -88,7 +91,7 @@ Clever uses lexical scoping.
 		++foo;
 	}
 	println(foo); // 1
-	
+
 - Global scope
 
 To access a variable declared outside a function declaration, you will need to
@@ -98,10 +101,10 @@ use the `global` keyword.
 ::
 
 	var foo;
-	
+
 	function test() {
 		global foo;
-		
+
 		++foo;
 	}
 
