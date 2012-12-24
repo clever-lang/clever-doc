@@ -200,3 +200,21 @@ Control Flow
 	for (i = 0; i < len; ++i) {
 		update(i);
 	}
+
+
+Errors and Exceptions
+---------------------
+
+- Syntax error
+
+- Runtime error
+
+- Throwing exception
+
+::
+
+	try {
+		throw Exception('test');
+	} catch (Exception e) {
+		println(e.message);
+	}

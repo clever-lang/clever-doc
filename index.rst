@@ -15,7 +15,7 @@ Welcome to Clever documentation!
    reference/index
    reference/packages/index
    getting_involved
-   api/index
+   internals/index
    faq
 
 Links
