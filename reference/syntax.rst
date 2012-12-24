@@ -4,7 +4,7 @@ Syntax
 .. highlight:: javascript
 
 This document specifies the language's syntax by showing some code examples.
-You can see the Clever parser grammar on :doc:`../internals/grammar`
+You can see the Clever parser grammar on :doc:`../internals/grammar` page.
 
 Comments
 --------

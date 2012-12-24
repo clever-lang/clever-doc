@@ -12,8 +12,10 @@ many seen in other languages.
 Building
 -----------
 
-To build Clever is easy, you will need to have *CMake* [1] installed.
+To build Clever is easy, you will need to have *CMake* [#f1]_ installed.
 Enter in the clever source directory and run ``cmake .``
 
 In this stage, you can help the *Clever Team* also by running ``make
 run-tests`` and reporting to us if you get some failures!
+
+.. [#f1] http://www.cmake.org/

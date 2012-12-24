@@ -27,9 +27,9 @@ Core Development
 Coding standards
 ###################
 
-We mostly code based on the *Google C++ Style Guide* [1], which seems sane
+We mostly code based on the *Google C++ Style Guide* [#f1]_, which seems sane
 enough.
-The *LLVM* [2] one is also quite nice.
+The *LLVM* [#f2]_ one is also quite nice.
 
 .. epigraph::
 
@@ -48,6 +48,6 @@ could implement one of the ideas from our whishlist:
 
 **Source code repository:** https://github.com/clever-lang/clever
 
-[1] - `Google C++ Style Guide <http://google-styleguide.googlecode.com/svn/trunk/cppguide.xml>`_
+.. [#f1] `Google C++ Style Guide <http://google-styleguide.googlecode.com/svn/trunk/cppguide.xml>`_
 
-[2] - `LLVM Coding Standards <http://llvm.org/docs/CodingStandards.html>`_
+.. [#f2] `LLVM Coding Standards <http://llvm.org/docs/CodingStandards.html>`_
