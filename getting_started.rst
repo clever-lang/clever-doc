@@ -5,7 +5,7 @@ Getting started!
 
 **Clever** is a general purpose dynamically typed, multi-paradigm
 (object-oriented, imperative) programming language written in *C++*.
-It aims to have a small footprint and supply an useful set of features, 
+It aims to have a small footprint and supply a useful set of features,
 many seen in other languages.
 
 -----------
