@@ -74,6 +74,36 @@ Functions
 
 	var foo = doFoo();
 	var sum = add(1, 3);
+	
+Scope rules
+-----------
+
+Clever uses lexical scoping.
+
+::
+
+	var foo = 1;
+	{
+		var foo = 2;
+		++foo;
+	}
+	println(foo); // 1
+	
+- Global scope
+
+To access a variable declared outside a function declaration, you will need to
+use the `global` keyword.
+
+
+::
+
+	var foo;
+	
+	function test() {
+		global foo;
+		
+		++foo;
+	}
 
 Native Data Types
 -----------------
@@ -99,7 +129,7 @@ Examples of construction of native data types in Clever. For full reference (met
 
 ::
 
-	var boolean = (true || false);
+	var bool = (true || false);
 
 - Array
 
@@ -107,13 +137,13 @@ Examples of construction of native data types in Clever. For full reference (met
 
 	var arr = [1, 'foo', true, Foo(x)];
 
-- Element access
+-  Element access
 
 ::
 
 	var x = arr[0];
 
-- Write
+-  Write
 
 ::
 
@@ -137,7 +167,7 @@ Examples of construction of native data types in Clever. For full reference (met
 
 	map[3.1415] = 'pi';
 
-Flow Control
+Control Flow
 ------------
 
 - If statements
