@@ -3,15 +3,15 @@ Getting involved!
 
 The *Clever Team* is usually on-line at IRC #clever (irc.freenode.net)
 
-Never have tried IRC? Test it! http://webchat.freenode.net/
+Have you never tried IRC? Test it! http://webchat.freenode.net/
 
 Mailing list
 -----------------
 
 Our mailing list is http://groups.google.com/group/clever-lang
 
-We have a lot of talks on IRC, but It's nice to register some debats on
-the group!
+We often have discussions on IRC, though that's not always the best choice.
+Using a group may allow more people to follow the development process of the project.
 
 Documentation
 ---------------

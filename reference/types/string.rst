@@ -21,9 +21,6 @@ String
 * String **substring(Int start, Int length)**:
    Retrieves a substring from the original one
 
-* String **__at__(Int pos)**:
-   Return the char at position, if possible
-
 * Bool **startsWith(String str)**:
    Returns true iff this String starts with the String given as argument
 

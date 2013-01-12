@@ -36,14 +36,14 @@ Variables
 ::
 
 	var a = 'foo'; // get_type(a) == String
-	a = Foo(arg1, arg2); // get_type(a) == Foo
+	a = Foo.new(arg1, arg2); // get_type(a) == Foo
 
 - Unitialized variables have value of `Null`
 
 ::
 
 	var foo;
-	assert(foo == Null);
+	assert(foo == null);
 
 
 - Use the `const` qualifier to ensure that it will not be changed (i.e: assigned with other value)
@@ -51,7 +51,7 @@ Variables
 ::
 
 	const foo = 'bar';
-	foo = 'baz'; // throws a RunTimeException
+	foo = 'baz'; // throws an Exception
 
 
 Functions
@@ -71,12 +71,34 @@ Functions
 
 	var myfunction = function(x, y) { return x + y; };
 
+- Functions can be passed as argument to functions, and even to be used as default value for parameters
+
+::
+
+	function test(msg, func = println) {
+		func(msg);
+	}
+	test("hello"); // prints 'hello'
+
+
 - Function call
 
 ::
 
 	var foo = doFoo();
 	var sum = add(1, 3);
+
+- Chaining function call
+
+::
+
+	function abc() {
+		return function() {
+			return 3;
+		}
+	}
+	println(abc()()); // 3
+
 
 Scope rules
 -----------
@@ -103,9 +125,7 @@ use the `global` keyword.
 	var foo;
 
 	function test() {
-		global foo;
-
-		++foo;
+		++foo; // changes the variable from outer scope
 	}
 
 Native Data Types
@@ -138,13 +158,14 @@ Examples of construction of native data types in Clever. For full reference (met
 
 ::
 
-	var arr = [1, 'foo', true, Foo(x)];
+	var arr = [1, 'foo', true, Foo.new(x)];
 
 -  Element access
 
 ::
 
 	var x = arr[0];
+	var z = arr.at(0);
 
 -  Write
 
@@ -179,11 +200,9 @@ Control Flow
 
 	if (x + y < z) {
 		foo();
-	}
-	else if (y + z < w) {
+	} else if (y + z < w) {
 		bar();
-	}
-	else {
+	} else {
 		baz();
 	}
 
@@ -204,6 +223,9 @@ Control Flow
 		update(i);
 	}
 
+	for (entry: container) {
+	}
+
 
 Errors and Exceptions
 ---------------------
@@ -217,7 +239,7 @@ Errors and Exceptions
 ::
 
 	try {
-		throw Exception('test');
-	} catch (Exception e) {
-		println(e.message);
+		throw 'test';
+	} catch (e) {
+		println(e); // test
 	}
