@@ -227,7 +227,7 @@ Control Flow
 	}
 
 
-- Spawn statement create a new thread or a thread vector.
+- Spawn statement creates a new thread or a thread vector.
 
 ::
 
