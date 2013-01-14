@@ -253,7 +253,7 @@ Control Flow
 	wait thread_name; // wait threads called "thread_name".
 
 
-- Critical statement define a critical section in the thread.
+- Critical statement defines a critical section in the thread.
 
 ::
 
