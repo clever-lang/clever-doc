@@ -236,6 +236,44 @@ Control Flow
 	}
 
 
+- Spawn statement creates a new thread or a thread vector.
+
+::
+
+	spawn thread_name {
+		... // statements block.
+
+		for (i = 0; i < n; ++i) {
+			... // do something.
+		}
+
+		foo();
+	}
+	or
+	spawn thread_name[2] { // create two threads.
+		... // do something.
+	}
+
+
+-  Wait statement is used to waiting a thread or a thread vector finish.
+
+::
+
+	wait thread_name; // wait threads called "thread_name".
+
+
+- Critical statement defines a critical section in the thread.
+
+::
+
+	spawn t {
+		critical {
+			doSomeCriticalOperation(); // here, you can read a file or a standard stream.
+		}
+	}
+
+
+
 Errors and Exceptions
 ---------------------
 
