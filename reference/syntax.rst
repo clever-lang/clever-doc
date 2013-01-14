@@ -249,7 +249,9 @@ Control Flow
 
 		foo();
 	}
-	or
+
+	// or...
+
 	spawn thread_name[2] { // create two threads.
 		... // do something.
 	}
