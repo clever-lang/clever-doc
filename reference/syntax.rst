@@ -230,6 +230,7 @@ Control Flow
 - Spawn statement create a new thread or a thread vector.
 
 ::
+
 	spawn thread_name {
 		... // statements block.
 
@@ -248,12 +249,14 @@ Control Flow
 -  Wait statement is used to waiting a thread or a thread vector finish.
 
 ::
+
 	wait thread_name; // wait threads called "thread_name".
 
 
 - Critical statement define a critical section in the thread.
 
 ::
+
 	spawn t {
 		critical {
 			doSomeCriticalOperation(); // here, you can read a file or a standard stream.
