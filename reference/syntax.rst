@@ -99,6 +99,15 @@ Functions
 	}
 	println(abc()()); // 3
 
+- Variadic functions
+
+::
+
+	function show(args...) {
+		args.each(println);
+	}
+	show(1, "foobar");
+
 
 Scope rules
 -----------
