@@ -1,4 +1,4 @@
-Standard package
+Standard module
 ================================================
 
 .. toctree::
