@@ -7,4 +7,4 @@ Language reference
   intro
   syntax
   types/index
-  packages/index
+  modules/index
