@@ -108,6 +108,21 @@ Functions
 	}
 	show(1, "foobar");
 
+- Closure
+
+::
+
+	var f = function (x) {
+		return function () {
+			return x;
+		};
+	};
+
+	var a = f(123);
+	var b = f(321);
+
+	print(a(), "-", b()); // 123-321
+
 
 Scope rules
 -----------
@@ -122,21 +137,6 @@ Clever uses lexical scoping.
 		++foo;
 	}
 	println(foo); // 1
-
-- Global scope
-
-To access a variable declared outside a function declaration, you will need to
-use the `global` keyword.
-
-
-::
-
-	var foo;
-
-	function test() {
-		global foo;
-		++foo; // changes the variable from outer scope
-	}
 
 Native Data Types
 -----------------
@@ -190,6 +190,7 @@ Examples of construction of native data types in Clever. For full reference (met
 ::
 
 	var map = {'name': 'Clever', 2: 'foo'};
+	var empty = { : };
 
 - Access
 
@@ -203,19 +204,58 @@ Examples of construction of native data types in Clever. For full reference (met
 
 	map[3.1415] = 'pi';
 
+User type
+------------
+
+- Creating a new type
+
+The name rule for type creationg is: the name must start with an upper case letter.
+
+::
+
+	class Foo {
+		var a;
+
+		function setA(v) {
+			this.a = v;
+		}
+
+		function getA() {
+			return this.a;
+		}
+	}
+
+- Property access
+
+As seen below, access to properties are done by using the `this` variable.
+
+- Class constructor
+
+To declare a constructor you need to declare a function using the same name
+than the type itself. See below:
+
+::
+
+	class Foo {
+		function Foo() {
+			// Constructor
+		}
+	}
+
+
 Control Flow
 ------------
+
+On condition, just the literal boolean `false` and `null` are evaluated to false
+value. Everything else is a true value. This means the integer zero is evaluated
+to true.
 
 - If statements
 
 ::
 
-	if (x + y < z) {
-		foo();
-	} else if (y + z < w) {
-		bar();
-	} else {
-		baz();
+	if (1 - 1) {
+		// okay, 0 is true!
 	}
 
 - While
@@ -284,7 +324,11 @@ Errors and Exceptions
 
 - Syntax error
 
+	On syntax error, the compilation is aborted.
+
 - Runtime error
+
+	Some internal methods can throw exceptions.
 
 - Throwing exception
 
