@@ -134,13 +134,16 @@ use the `global` keyword.
 	var foo;
 
 	function test() {
+		global foo;
 		++foo; // changes the variable from outer scope
 	}
 
 Native Data Types
 -----------------
 
-Examples of construction of native data types in Clever. For full reference (methods, properties, etc) please refer to: // TODO(muriloadriano): url here
+Examples of construction of native data types in Clever. For full reference (methods, properties, etc) please refer to: `Types`_
+
+.. _Types: http://clever-lang.github.com/doc/reference/types/index.html
 
 - String
 
