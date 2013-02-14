@@ -82,7 +82,16 @@ exclude_patterns = ['_build']
 #show_authors = False
 
 # The name of the Pygments (syntax highlighting) style to use.
-pygments_style = 'sphinx'
+# To get all available styles in your system, open the python2 interpreter
+# and execute the following code:
+# from pygments.styles import STYLE_MAP
+# STYLE_MAP.keys()
+# The default values returned im my system are:
+# ['monokai', 'manni', 'perldoc', 'borland', 'colorful', 
+#  'default', 'murphy', 'vs', 'trac', 'tango', 'fruity', 
+#  'autumn', 'bw', 'emacs', 'vim', 'pastie', 'friendly', 
+#  'native']
+pygments_style = 'manni'
 
 # A list of ignored prefixes for module index sorting.
 #modindex_common_prefix = []
