@@ -23,8 +23,8 @@ This will be a module inside the std module and it will be called *std.hello*.
 
 This module will contain the following:
   * A HelloWorld class with the following methods
-   * sayHello()
-   * sayMyName(whatToSay)
+    * sayHello()
+    * sayMyName(whatToSay)
   * A function called saySomething(name)
   * A constant CONST_HELLO_WORLD
 
@@ -43,8 +43,8 @@ of creating a module. This could be handy to be used when creating your modules.
   4. Create the class that extends the Type class (hello.cc in the examples below)
   5. Create the CMakeLists.txt file in the directory we created in step 1
   6. Add a directive for our module in modules.cmake in the root directory
-  7. Add the ifdef directive in the *_pkg.cc file from our top level module
-  8. Add the ifdef directive in the *_forward.h file from our top level module
+  7. Add the ifdef directive in the \*_pkg.cc file from our top level module
+  8. Add the ifdef directive in the \*_forward.h file from our top level module
   9. Add the if (MOD_*) directive in the CMakeLists.txt from our top level module
   10. Compile the whole thing
 
@@ -78,7 +78,7 @@ Create a file name **module.cc** and add the following code to it:
   // us do it easily.
   // This is the method that will be called when an "import std.hello.*" is
   // executed. It will cause all the 'things' that the HelloModule exports to be
-  // available for use in your Clever code! 
+  // available for use in your Clever code!
   CLEVER_MODULE_INIT(HelloModule)
   {
     // Here we add the type to Clever. The name of the class to be used
@@ -118,7 +118,7 @@ And the corresponding **module.h** file:
     // This here defines the name we will be using in the import directive
     // in our .clv file
     // For this case it will be
-    // import std.hello.*;  
+    // import std.hello.*;
     HelloModule()
       : Module("std.hello") {}
 
@@ -300,7 +300,7 @@ And the **hello.cc** file:
     }
 
     ::std::cout << "Your name is: " << args[0]->getStr()->c_str() << "\n";
-    
+
   }
 
   // Type initialization
@@ -317,14 +317,14 @@ And the **hello.cc** file:
     // Here we add the methods to our class
     addMethod(new Function("sayHello",  (MethodPtr) &Hello::sayHello));
     addMethod(new Function("sayMyName",  (MethodPtr) &Hello::sayMyName));
-    
+
   }
 
   }}} // clever::modules::std
 
 
 At this point the code is complete. All that is left to be done is adding
-some references to our module in the top level module headers and adding 
+some references to our module in the top level module headers and adding
 some compiler directives to the compilation scripts.
 
 In the **modules/std/hello/** directory create a CMakeLists.txt file with
