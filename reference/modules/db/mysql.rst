@@ -21,7 +21,7 @@ This is the main class for this module. It represents a connection to the
 specified database with the selected user/password/port combination provided in
 the constructor or connect() method.
 This class provides the following methods:
-	
+
 	* `connect()`_
 	* `query()`_
 	* `fetchRow()`_
@@ -71,10 +71,9 @@ The error can be checked calling either the `getError()`_ or `getErrorNumber()`_
 
 	import db.mysql.*;
 	import std.io.*;
-	import std.reflection.*;
 
 	var m = Mysql.new();
-	if(m.connect("localhost", "user", "password", "clever_db")) {
+	if (m.connect("localhost", "user", "password", "clever_db")) {
 	    println("Connected!");
 	} else {
 	    println("Error connecting");
@@ -90,7 +89,7 @@ query()
 	bool query(String query)
 
 Allows the programmer to execute a query in the selected database. Only one query
-is allowed per call. 
+is allowed per call.
 
 **Parameters**
 
@@ -108,16 +107,15 @@ The error can be checked calling either the `getError()`_ or `getErrorNumber()`_
 
 	import db.mysql.*;
 	import std.io.*;
-	import std.reflection.*;
 
 	var m = Mysql.new();
-	if(m.connect("localhost", "user", "password", "clever_db")) {
+	if (m.connect("localhost", "user", "password", "clever_db")) {
 	    println("Connected!");
 	} else {
 	    println("Error connecting");
 	}
 
-	if(m.query("select * from users")) {
+	if (m.query("select * from users")) {
 		println("Succesfully executed query!");
 	}
 
@@ -131,7 +129,7 @@ fetchRow()
 
 	Map fetchRow()
 
-This method should be called after the `query()`_ method to retrieve the 
+This method should be called after the `query()`_ method to retrieve the
 returned rows from the database one by one. Every time this method is called
 the next row of the resultset will be retrieved from the database directly.
 
@@ -152,23 +150,21 @@ If no more data is found, it returns ``null``.
 
 	import db.mysql.*;
 	import std.io.*;
-	import std.reflection.*;
 
 	var m = Mysql.new();
-	if(m.connect("localhost", "user", "password", "clever_db")) {
+	if (m.connect("localhost", "user", "password", "clever_db")) {
 	    println("Connected!");
 	} else {
 	    println("Error connecting");
 	}
 
-	if(m.query("select * from users")) {
+	if (m.query("select * from users")) {
 		println("Succesfully executed query!");
 	}
 
-	data = m.fetchRow();
-	while(data) {
+	var data;
+	while (data = m.fetchRow()) {
 	    println(data);
-	    data = m.fetchRow();
 	}
 
 
