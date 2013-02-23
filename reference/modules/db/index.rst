@@ -1,8 +1,6 @@
-Modules
+Database module
 ================================================
 
 .. toctree::
-   :maxdepth: 1
 
-   std/index
-   db/index
+   mysql 
