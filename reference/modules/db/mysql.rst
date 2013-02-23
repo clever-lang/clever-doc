@@ -25,8 +25,8 @@ This class provides the following methods:
 	* `connect()`_
 	* `query()`_
 	* `fetchRow()`_
-	* `error()`_
-	* `errno()`_
+	* `getError()`_
+	* `getErrorNumber()`_
 
 Methods
 -------
@@ -63,7 +63,7 @@ Used to connect to the database.
 
 Returns **true** if the connection was successfull, **false** otherwise.
 
-The error can be checked calling either the `error()`_ or `errno()`_ methods.
+The error can be checked calling either the `getError()`_ or `getErrorNumber()`_ methods.
 
 **Example**
 
@@ -100,7 +100,7 @@ is allowed per call.
 
 Returns **true** if the query was successfully executed, **false** otherwise.
 
-The error can be checked calling either the `error()`_ or `errno()`_ methods.
+The error can be checked calling either the `getError()`_ or `getErrorNumber()`_ methods.
 
 **Example**
 
@@ -129,7 +129,7 @@ fetchRow()
 
 ::
 
-	MysqlRow fetchRow()
+	Map fetchRow()
 
 This method should be called after the `query()`_ method to retrieve the 
 returned rows from the database one by one. Every time this method is called
@@ -172,17 +172,17 @@ If no more data is found, it returns ``null``.
 	}
 
 
-.. error():
+.. getError():
 
-error()
-^^^^^^^
+getError()
+^^^^^^^^^^
 
 Error method
 
-.. errno():
+.. getErrorNumber():
 
-errno()
-^^^^^^^
+getErrorNumber()
+^^^^^^^^^^^^^^^^
 
 Error number method
 
