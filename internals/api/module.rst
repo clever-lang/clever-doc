@@ -404,9 +404,10 @@ As a test code, use the following:
 Adding the function
 -------------------
 
-TODO
+.. :todo:: Needs to be done
+
 
 Adding the constant
 -------------------
 
-TODO
+.. :todo:: Needs to be done
