@@ -40,7 +40,7 @@ The *LLVM* [#f2]_ one is also quite nice.
   (Line feed a.k.a. \n).
 
 If you don't know how to contribute, but know how to code, it'd be nice if you
-could implement one of the ideas from our whishlist:
+could implement one of the ideas from our wishlist:
 `TODO List & Ideas <https://github.com/clever-lang/clever/wiki/TODO-List-&-Ideas>`_
 
 **Git help:** - `Fork a repo <http://help.github.com/fork-a-repo/>`_ - `Send pull requests <http://help.github.com/send-pull-requests/>`_
